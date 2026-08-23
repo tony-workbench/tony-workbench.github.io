@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f1e9" />
+    <meta name="description" content="A three-person computer vision study using YOLOv8n-OBB to detect chess pieces in angled, non-ideal photos." />
+    <link rel="canonical" href="https://tonyhu20040722.github.io/vision.html" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tonyhu20040722.github.io/vision.html" />
+    <meta property="og:title" content="Chess Piece Detection from Angled Photos — Yungang Hu" />
+    <meta property="og:description" content="Training and evaluating YOLOv8n-OBB for chess-piece detection under varied viewpoints and lighting." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Chess Piece Detection from Angled Photos — Yungang Hu" />
+    <meta name="twitter:description" content="Training and evaluating YOLOv8n-OBB for chess-piece detection under varied viewpoints and lighting." />
+    <title>Chess Piece Detection from Angled Photos — Yungang Hu</title>
+  </head>
+  <body class="briefPage">
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <nav class="briefNav briefShell" aria-label="Project navigation">
+      <a class="brand" href="/">YH<span>04</span></a>
+      <a href="/#work">← All projects</a>
+    </nav>
+
+    <main class="briefShell" id="main">
+      <header class="briefHeader">
+        <p class="briefKicker">Computer vision · Oriented detection · Error analysis</p>
+        <h1>Chess Piece Detection from Angled Photos</h1>
+        <p class="briefLead">A three-person UC Davis project testing whether an oriented object detector can recognize chess pieces beyond ideal top-down views.</p>
+        <p class="briefMeta">ECS 174 <span>·</span> Sep–Dec 2025 <span>·</span> <strong>Three-person team</strong></p>
+      </header>
+
+      <div class="briefColumns">
+        <div class="briefMain">
+          <section class="briefSection">
+            <h2>Problem</h2>
+            <p>Many chess-recognition systems assume a clear top-down camera angle and even lighting. Real photos introduce perspective distortion, glare, shadows, different piece styles, and overlapping pieces.</p>
+            <p>We asked whether YOLOv8 with an oriented bounding-box head could detect and classify pieces under these less controlled conditions.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>Setup</h2>
+            <dl class="briefFacts">
+              <div><dt>Model</dt><dd>Pretrained YOLOv8n-OBB, fine-tuned to detect black and white chess pieces</dd></div>
+              <div><dt>Dataset</dt><dd>Kaggle chess dataset with real and synthetic images</dd></div>
+              <div><dt>Training</dt><dd>606 images · 640 px · 20 epochs · batch size 20</dd></div>
+              <div><dt>Validation</dt><dd>58 images · 386 labeled piece instances</dd></div>
+            </dl>
+          </section>
+
+          <section class="briefSection">
+            <h2>Validation results</h2>
+            <p>On the project&apos;s 58-image validation split, the trained model reported:</p>
+            <dl class="briefFacts">
+              <div><dt>mAP@0.5</dt><dd>0.9875</dd></div>
+              <div><dt>mAP@0.5:0.95</dt><dd>0.8996</dd></div>
+              <div><dt>Precision</dt><dd>0.983</dd></div>
+              <div><dt>Recall</dt><dd>0.961</dd></div>
+            </dl>
+          </section>
+
+          <section class="briefSection">
+            <h2>Failure analysis</h2>
+            <ul class="briefList">
+              <li>Pieces cut off at the image border were sometimes missed.</li>
+              <li>Small pawns were harder to separate from the background.</li>
+              <li>Low-contrast piece-and-square combinations reduced visual separation.</li>
+              <li>Heavy perspective overlap made occluded pieces harder to detect.</li>
+            </ul>
+          </section>
+
+          <section class="briefSection">
+            <h2>Limits and next step</h2>
+            <p>The study used a modest validation split and did not include an external test set or an axis-aligned-box baseline. It detects pieces, but it does not yet reconstruct a legal chess position.</p>
+            <p>Next steps include perspective correction, board and FEN reconstruction, targeted augmentation for glare and extreme viewpoints, and real-world mobile testing.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>My contribution</h2>
+            <p>I authored the technical report for the three-person team, organizing the project&apos;s problem, method, validation results, failure analysis, limitations, and next-step recommendations.</p>
+          </section>
+        </div>
+
+        <aside class="briefAside" aria-label="Project methods and evidence status">
+          <section>
+            <h2>Stack</h2>
+            <p>Python, PyTorch, Ultralytics YOLOv8n-OBB, Google Colab, oriented bounding boxes, data augmentation, and object-detection evaluation.</p>
+          </section>
+          <section>
+            <h2>Evidence status</h2>
+            <p>The final report and executed notebook were reviewed privately. The raw files are not published because the report contains teammates&apos; contact details, and the dataset images are not reproduced here.</p>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="briefFooter">
+        <a href="/#work">← Back to all projects</a>
+      </footer>
+    </main>
+  </body>
+</html>
