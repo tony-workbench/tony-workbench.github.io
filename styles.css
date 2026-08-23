@@ -194,3 +194,168 @@ footer { min-height:120px; display:flex; align-items:center; justify-content:spa
   html { scroll-behavior:auto; }
   .button, .evidenceCard.live, .projectLink { transition:none; }
 }
+
+/* Clear, compact homepage */
+.homePage {
+  --home-bg:#f7f6f2;
+  --home-ink:#1d2822;
+  --home-muted:#58645d;
+  --home-line:#d7dcd7;
+  --home-accent:#486252;
+  --home-accent-dark:#2f4738;
+  background:var(--home-bg);
+  color:var(--home-ink);
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+.homePage a:focus-visible,
+.homePage summary:focus-visible { outline:3px solid #54735f; outline-offset:4px; }
+.homeNav { min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:28px; border-bottom:1px solid var(--home-line); }
+.homeBrand { display:inline-flex; align-items:baseline; gap:6px; min-height:40px; font-size:17px; font-weight:800; letter-spacing:-.02em; }
+.homeBrand span { color:var(--home-muted); font-weight:600; }
+.homeNavLinks { display:flex; align-items:center; gap:26px; font-size:13px; font-weight:700; }
+.homeNavLinks > a { display:inline-flex; min-height:40px; align-items:center; border-bottom:2px solid transparent; }
+.homeNavLinks > a:not(.homeNavCta):hover { border-bottom-color:var(--home-accent); }
+.homeNavCta { min-height:auto !important; padding:10px 15px; border:1px solid var(--home-accent-dark); border-radius:10px; }
+.homeNavCta:hover { background:var(--home-accent-dark); color:#fff; }
+.homeHero { min-height:600px; display:grid; grid-template-columns:minmax(0, 1.5fr) 300px; gap:76px; align-items:center; padding:68px 0 82px; border-bottom:1px solid var(--home-line); }
+.homeHeroCopy { min-width:0; }
+.homeKicker,
+.homeSectionLabel { margin:0 0 16px; color:var(--home-accent); font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.homeHero h1 { max-width:760px; margin:0; font-size:clamp(48px, 6vw, 78px); line-height:1.02; letter-spacing:-.04em; font-weight:780; }
+.homeHero h1 span { display:block; color:var(--home-accent); font-size:.78em; font-weight:650; letter-spacing:-.03em; }
+.homeRole { max-width:720px; margin:28px 0 14px; font-size:clamp(25px, 2.8vw, 37px); line-height:1.22; letter-spacing:-.025em; font-weight:680; }
+.homeIntro { max-width:650px; margin:0; color:var(--home-muted); font-size:18px; line-height:1.66; }
+.homeAvailability { display:flex; align-items:flex-start; gap:10px; max-width:650px; margin:20px 0 0; color:#39473f; font-size:14px; line-height:1.55; }
+.homeAvailability span { flex:0 0 auto; width:9px; height:9px; margin-top:6px; border-radius:50%; background:#5a7b65; box-shadow:0 0 0 4px #dfe8e1; }
+.homeActions { display:flex; flex-wrap:wrap; align-items:center; gap:12px 18px; margin-top:28px; }
+.homeButton { display:inline-flex; min-height:46px; align-items:center; justify-content:center; padding:12px 18px; border-radius:10px; font-size:14px; font-weight:800; transition:transform .18s ease, background .18s ease; }
+.homeButton:hover { transform:translateY(-2px); }
+.homeButton.primary { background:var(--home-accent-dark); color:#fff; }
+.homeButton.secondary { border:1px solid #aeb9b2; background:#fff; }
+.homeTextLink { display:inline-flex; min-height:40px; align-items:center; color:var(--home-muted); font-size:14px; font-weight:750; }
+.homeTextLink:hover { color:var(--home-ink); }
+.homeProfile { overflow:hidden; border:1px solid var(--home-line); border-radius:20px; background:#fff; box-shadow:0 18px 50px rgba(31,47,38,.09); }
+.homeProfile figure { aspect-ratio:4 / 4.7; margin:0; overflow:hidden; background:#ecefeb; }
+.homeProfile img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 30%; }
+.homeProfileText { display:flex; flex-direction:column; gap:5px; padding:19px 20px 22px; }
+.homeProfileText strong { font-size:14px; }
+.homeProfileText span { color:var(--home-muted); font-size:12px; line-height:1.45; }
+.homeWork,
+.homeApproach,
+.homeSkills { padding:92px 0; }
+.homeSectionHeader { display:flex; align-items:flex-end; justify-content:space-between; gap:48px; margin-bottom:38px; }
+.homeSectionHeader.compact { margin-bottom:28px; }
+.homeSectionHeader h2,
+.homeContact h2 { max-width:760px; margin:0; font-size:clamp(38px, 4.8vw, 58px); line-height:1.05; letter-spacing:-.035em; }
+.homeSectionHeader > p { max-width:410px; margin:0; color:var(--home-muted); font-size:16px; line-height:1.65; }
+.homeProjectGrid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:18px; }
+.homeProjectCard { --card-accent:#486252; position:relative; min-height:390px; display:flex; flex-direction:column; overflow:hidden; padding:28px; border:1px solid #cfd6d1; border-radius:18px; background:#fff; box-shadow:0 8px 24px rgba(31,47,38,.045); transition:transform .2s ease, box-shadow .2s ease; }
+.homeProjectCard::before { content:""; position:absolute; inset:0 0 auto; height:5px; background:var(--card-accent); }
+.homeProjectCard.cropcall { --card-accent:#55745f; background:#e9efe9; }
+.homeProjectCard.slim { --card-accent:#405b66; background:#edf1f2; }
+.homeProjectCard.vision { --card-accent:#735f4b; background:#f1ede7; }
+.homeProjectCard:hover { transform:translateY(-4px); box-shadow:0 18px 38px rgba(31,47,38,.11); }
+.homeProjectMeta { display:flex; justify-content:space-between; gap:18px; color:var(--home-muted); font-size:12px; font-weight:750; }
+.homeProjectMeta time { text-align:right; }
+.homeProjectType { margin:34px 0 9px !important; color:var(--card-accent) !important; font-size:12px !important; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+.homeProjectCard h3 { margin:0 0 15px; font-size:31px; line-height:1.1; letter-spacing:-.03em; }
+.homeProjectCard > p { margin:0; color:#47544d; font-size:16px; line-height:1.6; }
+.homeProjectCard .homeProjectResult { margin-top:auto; padding-top:24px; border-top:1px solid rgba(53,71,61,.18); color:#33433a; font-size:13px; font-weight:750; }
+.homeProjectLink { margin-top:15px; color:var(--home-ink); font-size:14px; font-weight:850; }
+.homeApproach { border-top:1px solid var(--home-line); }
+.homeApproachGrid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); border:1px solid var(--home-line); border-radius:18px; background:#fff; }
+.homeApproachGrid article { min-height:220px; padding:28px; border-right:1px solid var(--home-line); }
+.homeApproachGrid article:last-child { border-right:0; }
+.homeApproachGrid span,
+.homeSkillGrid span { color:var(--home-accent); font-size:12px; font-weight:800; }
+.homeApproachGrid h3 { margin:48px 0 11px; font-size:24px; letter-spacing:-.025em; }
+.homeApproachGrid p { max-width:32ch; margin:0; color:var(--home-muted); font-size:15px; line-height:1.65; }
+.homeExperience { padding:92px 0; background:#213128; color:#f5f7f5; }
+.homeSectionHeader.inverse .homeSectionLabel { color:#abc0b1; }
+.homeSectionHeader.inverse > p { color:#b8c4bc; }
+.homeExperienceList { border-top:1px solid #506158; }
+.homeExperienceRow { display:grid; grid-template-columns:150px 1fr 1.35fr; gap:34px; padding:30px 0; border-bottom:1px solid #506158; }
+.homeExperienceRow time { color:#aebdb4; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.homeExperienceRow h3 { margin:0 0 6px; font-size:22px; line-height:1.2; letter-spacing:-.02em; }
+.homeExperienceRow p { margin:0; color:#c7d0ca; font-size:15px; line-height:1.65; }
+.homeExperienceRow .homeRoleLabel { color:#f0f3f1; font-size:13px; }
+.homeExperienceRow details { margin-top:14px; }
+.homeExperienceRow summary { width:max-content; max-width:100%; min-height:30px; color:#f3f5f3; cursor:pointer; font-size:13px; font-weight:800; }
+.homeExperienceRow details[open] summary { margin-bottom:12px; }
+.homeExperienceRow ul { margin:0; padding-left:18px; }
+.homeExperienceRow li { margin:0 0 7px; color:#b8c4bc; font-size:14px; line-height:1.55; }
+.homeSkillGrid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); overflow:hidden; border:1px solid var(--home-line); border-radius:18px; background:#fff; }
+.homeSkillGrid article { min-height:190px; padding:28px; border-right:1px solid var(--home-line); border-bottom:1px solid var(--home-line); }
+.homeSkillGrid article:nth-child(2n) { border-right:0; }
+.homeSkillGrid article:nth-last-child(-n+2) { border-bottom:0; }
+.homeSkillGrid h3 { margin:38px 0 10px; font-size:26px; letter-spacing:-.025em; }
+.homeSkillGrid p { max-width:54ch; margin:0; color:var(--home-muted); font-size:15px; line-height:1.65; }
+.homeContact { display:grid; grid-template-columns:1.2fr .9fr; gap:70px; align-items:center; margin-top:24px; margin-bottom:48px; padding:62px; border-radius:22px; background:var(--home-accent-dark); color:#f7faf8; }
+.homeContact .homeSectionLabel { color:#bfd0c4; }
+.homeContactCopy > p { margin:0 0 24px; color:#d7e0da; font-size:17px; line-height:1.65; }
+.homeContactButton { display:inline-flex; min-height:46px; align-items:center; max-width:100%; padding:12px 16px; border-radius:10px; background:#fff; color:var(--home-accent-dark); font-size:14px; font-weight:850; overflow-wrap:anywhere; }
+.homeContactCopy > div { display:flex; flex-wrap:wrap; gap:20px; margin-top:20px; }
+.homeContactCopy > div a { display:inline-flex; min-height:38px; align-items:center; color:#dce5df; font-size:14px; font-weight:750; }
+.homeFooter { min-height:100px; color:var(--home-muted); }
+.homeFooter > a:first-child { color:var(--home-ink); font-size:14px; font-weight:800; }
+.homeFooter a { display:inline-flex; min-height:40px; align-items:center; }
+
+@media (max-width:980px) {
+  .homeHero { grid-template-columns:minmax(0, 1fr) 250px; gap:46px; }
+  .homeProjectGrid { grid-template-columns:1fr; }
+  .homeProjectCard { min-height:300px; }
+  .homeExperienceRow { grid-template-columns:125px 1fr 1.35fr; gap:24px; }
+}
+
+@media (max-width:760px) {
+  .homePage .shell { width:min(100% - 32px, 1160px); }
+  .homeNav { min-height:70px; gap:14px; }
+  .homeBrand { font-size:14px; white-space:nowrap; }
+  .homeNavLinks { gap:10px; font-size:12px; }
+  .homeNavLinks a[href="#skills"] { display:none; }
+  .homeNavCta { padding:8px 10px; }
+  .homeHero { min-height:auto; grid-template-columns:1fr; gap:38px; padding:54px 0 64px; }
+  .homeHero h1 { font-size:clamp(43px, 13vw, 58px); line-height:1.02; }
+  .homeRole { margin-top:23px; font-size:26px; }
+  .homeIntro { font-size:17px; }
+  .homeProfile { display:grid; grid-template-columns:125px 1fr; }
+  .homeProfile figure { aspect-ratio:4 / 5; }
+  .homeProfileText { justify-content:center; padding:18px; }
+  .homeWork, .homeApproach, .homeSkills, .homeExperience { padding:64px 0; }
+  .homeSectionHeader { align-items:flex-start; flex-direction:column; gap:14px; margin-bottom:28px; }
+  .homeSectionHeader h2, .homeContact h2 { font-size:38px; }
+  .homeSectionHeader > p { font-size:15px; }
+  .homeProjectCard { min-height:0; padding:24px; }
+  .homeProjectCard h3 { font-size:29px; }
+  .homeProjectCard .homeProjectResult { margin-top:36px; }
+  .homeApproachGrid { grid-template-columns:1fr; }
+  .homeApproachGrid article { min-height:0; padding:24px; border-right:0; border-bottom:1px solid var(--home-line); }
+  .homeApproachGrid article:last-child { border-bottom:0; }
+  .homeApproachGrid h3 { margin-top:28px; }
+  .homeExperienceRow { grid-template-columns:1fr; gap:12px; padding:26px 0; }
+  .homeExperienceRow h3 { margin-top:3px; }
+  .homeSkillGrid { grid-template-columns:1fr; }
+  .homeSkillGrid article,
+  .homeSkillGrid article:nth-child(2n),
+  .homeSkillGrid article:nth-last-child(-n+2) { min-height:0; padding:24px; border-right:0; border-bottom:1px solid var(--home-line); }
+  .homeSkillGrid article:last-child { border-bottom:0; }
+  .homeSkillGrid h3 { margin-top:28px; }
+  .homeContact { grid-template-columns:1fr; gap:30px; margin-top:8px; padding:38px 24px; }
+  .homeContactCopy > p { font-size:16px; }
+  .homeFooter { padding:26px 0; flex-wrap:wrap; }
+}
+
+@media (max-width:440px) {
+  .homeBrand span { display:none; }
+  .homeNavLinks { gap:8px; }
+  .homeNavLinks > a { min-height:36px; }
+  .homeNavCta { padding:7px 8px; }
+  .homeActions { align-items:stretch; }
+  .homeButton { width:100%; }
+  .homeTextLink { margin-right:8px; }
+  .homeProfile { grid-template-columns:108px 1fr; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .homeButton, .homeProjectCard { transition:none; }
+}
