@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f1e9" />
+    <meta name="description" content="SLiM replication study: testing one-shot LLM compression across evaluation and calibration settings." />
+    <link rel="canonical" href="https://tonyhu20040722.github.io/slim.html" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tonyhu20040722.github.io/slim.html" />
+    <meta property="og:title" content="SLiM Replication Study — Yungang Hu" />
+    <meta property="og:description" content="Testing whether one-shot LLM compression results remain consistent across evaluation and calibration settings." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="SLiM Replication Study — Yungang Hu" />
+    <meta name="twitter:description" content="Testing whether one-shot LLM compression results remain consistent across evaluation and calibration settings." />
+    <title>SLiM Replication Study — Yungang Hu</title>
+  </head>
+  <body class="briefPage">
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <nav class="briefNav briefShell" aria-label="Project navigation">
+      <a class="brand" href="/">YH<span>04</span></a>
+      <a href="/#work">← All projects</a>
+    </nav>
+
+    <main class="briefShell" id="main">
+      <header class="briefHeader">
+        <p class="briefKicker">LLM evaluation · Reproducibility · Compression</p>
+        <h1>SLiM Replication Study</h1>
+        <p class="briefLead">Testing whether one-shot LLM compression results remain consistent across evaluation and calibration settings.</p>
+        <p class="briefMeta">UC Davis <span>·</span> Three-person research project <span>·</span> Jan–Mar 2026</p>
+      </header>
+
+      <div class="briefColumns">
+        <div class="briefMain">
+          <section class="briefSection">
+            <h2>Research question</h2>
+            <p>Can SLiM&apos;s published compression behavior on LLaMA-2-13B be reproduced, and does it remain consistent when the calibration dataset changes?</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>Setup</h2>
+            <dl class="briefFacts">
+              <div><dt>Model</dt><dd>LLaMA-2-13B</dd></div>
+              <div><dt>Configuration</dt><dd>4-bit quantization · 50% sparsity</dd></div>
+              <div><dt>Compared</dt><dd>Dense · Wanda · SLiM</dd></div>
+              <div><dt>Calibration</dt><dd>C4 · Pile · CodeParrot</dd></div>
+              <div><dt>Completed tasks</dt><dd>ARC-Easy · ARC-Challenge · WinoGrande · OpenBookQA</dd></div>
+            </dl>
+          </section>
+
+          <section class="briefSection">
+            <h2>Results and limitations</h2>
+            <ul class="briefList">
+              <li>Under C4 and the four completed tasks, the aggregate ordering was <strong>Dense &gt; SLiM &gt; Wanda</strong>.</li>
+              <li>Under Pile calibration, SLiM did not clearly outperform Wanda.</li>
+              <li>The CodeParrot comparison was inconclusive because of a run-configuration issue.</li>
+              <li>Two of six benchmark evaluations did not complete, so this is a partial replication rather than a full confirmation.</li>
+            </ul>
+          </section>
+
+          <section class="briefSection">
+            <h2>My contribution</h2>
+            <p>I worked as a member of the three-person research team and co-authored the final report, contributing to the experimental comparison, interpretation of results, and documentation of reproducibility limitations.</p>
+          </section>
+        </div>
+
+        <aside class="briefAside" aria-label="Project evidence">
+          <section>
+            <h2>Evidence</h2>
+            <a class="briefLink" href="https://github.com/jasonbao9402/slimECS189" target="_blank" rel="noreferrer">Public team repository ↗</a>
+            <p>Code, experiment materials, and final report.</p>
+            <a class="briefLink" href="https://proceedings.mlr.press/v267/mozaffari25a.html" target="_blank" rel="noreferrer">Original SLiM paper ↗</a>
+            <p>Official ICML 2025 publication.</p>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="briefFooter">
+        <a href="/#work">← Back to all projects</a>
+      </footer>
+    </main>
+  </body>
+</html>
