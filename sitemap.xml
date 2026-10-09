@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tonyhu20040722.github.io/</loc>
+    <loc>https://tony-workbench.github.io/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tonyhu20040722.github.io/cropcall.html</loc>
+    <loc>https://tony-workbench.github.io/cropcall.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tonyhu20040722.github.io/slim.html</loc>
+    <loc>https://tony-workbench.github.io/slim.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tonyhu20040722.github.io/vision.html</loc>
+    <loc>https://tony-workbench.github.io/vision.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
