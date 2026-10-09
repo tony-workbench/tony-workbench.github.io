@@ -20,7 +20,7 @@
     <a class="skipLink" href="#main">Skip to content</a>
 
     <nav class="briefNav briefShell" aria-label="Project navigation">
-      <a class="wordmark" href="index.html" aria-label="Tony Hu home">TONY HU<span aria-hidden="true">↗</span></a>
+      <a class="wordmark" href="index.html" aria-label="Tony Hu home">TONY HU</a>
       <a href="index.html#work">← All projects</a>
     </nav>
 
@@ -83,14 +83,17 @@
           </section>
         </div>
 
-        <aside class="briefAside" aria-label="Project methods and evidence status">
+        <aside class="briefAside" aria-label="Project methods and evidence">
           <section>
             <h2>Stack</h2>
             <p>Python, PyTorch, Ultralytics YOLOv8n-OBB, Google Colab, oriented bounding boxes, data augmentation, and object-detection evaluation.</p>
           </section>
           <section>
-            <h2>Evidence status</h2>
-            <p>The final report and executed notebook were reviewed privately. The raw files are not published because the report contains teammates&apos; contact details, and the dataset images are not reproduced here.</p>
+            <h2>Evidence</h2>
+            <figure class="evidenceFigure">
+              <img src="assets/chess-training-curves.png" alt="Original YOLOv8 training chart showing training losses and validation precision, recall, and mAP over 20 epochs" loading="lazy" width="1180" height="632" />
+              <figcaption>Figure 3 from our final report, page 3: training and validation curves over 20 epochs. The validation results above use the project’s 58-image split, not an independent external test set.</figcaption>
+            </figure>
           </section>
         </aside>
       </div>

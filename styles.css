@@ -16,8 +16,14 @@ p+p { margin-top:14px; }
 .siteHeader { min-height:104px; border-bottom:1px solid var(--line); }
 .wordmark { font-size:17px; font-weight:800; letter-spacing:-.02em; text-decoration:none; }
 .wordmark span { color:var(--orange); margin-left:10px; font-size:24px; }
-.siteHeader nav { display:flex; gap:28px; font-size:14px; }
+.siteHeader nav { display:flex; align-items:center; gap:14px; }
 .siteHeader nav a { text-decoration:none; }
+.contactIcon { display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:6px; }
+.contactIcon svg { display:block; width:25px; height:25px; fill:currentColor; }
+.contactIcon.gmailIcon { color:#ea4335; }
+.contactIcon.githubIcon { color:var(--ink); }
+.contactIcon.linkedinIcon { color:#0a66c2; }
+.contactIcon:hover { background:var(--white); }
 .eyebrow { color:var(--orange); font-size:12px; line-height:1.5; font-weight:750; letter-spacing:.13em; text-transform:uppercase; }
 .hero { display:grid; grid-template-columns:minmax(0,1fr) 200px; gap:65px; align-items:center; padding-block:72px 84px; }
 .hero h1 { margin-top:20px; font-size:clamp(42px,4.1vw,56px); }
@@ -29,7 +35,7 @@ p+p { margin-top:14px; }
 .primaryLink:hover { background:var(--orange); color:white; }
 .primaryLink span { margin-left:8px; }
 .portrait { position:relative; }
-.portrait img { aspect-ratio:4/5; object-fit:cover; border-bottom:6px solid var(--bright); }
+.portrait img { aspect-ratio:4/5; object-fit:cover; }
 .portrait figcaption { font-size:12px; color:var(--muted); margin-top:10px; }
 .section { padding-block:60px; border-top:1px solid var(--line); }
 .sectionHeading { max-width:790px; margin-bottom:32px; }
@@ -94,6 +100,11 @@ p+p { margin-top:14px; }
 .briefAside section { padding-left:20px; border-left:3px solid var(--bright); margin:20px 0 30px; }
 .briefAside h2 { font-size:19px; margin-bottom:13px; }
 .briefAside p { font-size:15px; color:var(--muted); }
+.evidenceFigure { margin-top:18px; }
+.evidenceFigure>img { width:100%; height:auto; background:var(--white); }
+.evidenceFigure figcaption { font-size:14px; line-height:1.6; color:var(--muted); margin-top:12px; }
+.certificateViewport { position:relative; aspect-ratio:4/3; overflow:hidden; background:var(--white); }
+.certificateViewport img { position:absolute; left:50%; top:50%; width:75%; max-width:none; height:auto; transform:translate(-50%,-50%) rotate(-90deg); }
 .briefLink { display:inline-block; margin-bottom:10px; color:var(--orange); }
 .briefAside p+.briefLink { margin-top:18px; }
 .briefFooter { border-top:1px solid var(--line); font-size:14px; padding-block:28px 50px; }
@@ -106,14 +117,14 @@ p+p { margin-top:14px; }
   .siteHeader { min-height:84px; gap:16px; }
   .wordmark { font-size:14px; white-space:nowrap; }
   .wordmark span { margin-left:5px; font-size:19px; }
-  .siteHeader nav { gap:16px; font-size:12px; }
+  .siteHeader nav { gap:4px; }
   .hero { grid-template-columns:minmax(0,1fr); gap:30px; padding-block:44px 48px; }
   .hero h1 { font-size:45px; }
   .heroLead { font-size:23px; }
   .intro { font-size:16px; }
   .heroLinks { gap:17px; }
   .portrait { display:flex; align-items:flex-end; gap:16px; }
-  .portrait img { width:104px; border-bottom-width:4px; }
+  .portrait img { width:104px; }
   .portrait figcaption { max-width:130px; }
   .section { padding-block:42px; }
   .sectionHeading h2 { font-size:29px; }

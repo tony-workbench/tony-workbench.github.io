@@ -16,6 +16,8 @@ The site is static and dependency-free. Its text, images, and navigation work wi
 
 `styles.css` provides the shared light-gray, ink, and orange visual system. Project claims distinguish team work, prototypes, measured results, and limitations; private company and recruiting materials are not included.
 
+Project evidence is displayed inline: the hackathon participation certificate and original figures extracted from our SLiM and chess-detection reports. The report exhibits exclude teammates’ contact information. Homepage contact links use SVG icons: Gmail and GitHub from [Simple Icons](https://simpleicons.org/), and LinkedIn from [Font Awesome Free](https://fontawesome.com/license/free) (CC BY 4.0).
+
 ## Local preview
 
 Run `python3 -m http.server 8000` in this directory, then open `http://localhost:8000/`.

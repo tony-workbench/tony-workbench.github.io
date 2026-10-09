@@ -20,7 +20,7 @@
     <a class="skipLink" href="#main">Skip to content</a>
 
     <nav class="briefNav briefShell" aria-label="Project navigation">
-      <a class="wordmark" href="index.html" aria-label="Tony Hu home">TONY HU<span aria-hidden="true">↗</span></a>
+      <a class="wordmark" href="index.html" aria-label="Tony Hu home">TONY HU</a>
       <a href="index.html#work">← All projects</a>
     </nav>
 
@@ -54,8 +54,7 @@
             <h2>Results and limitations</h2>
             <ul class="briefList">
               <li>Under C4 and the four completed tasks, the aggregate ordering was <strong>Dense &gt; SLiM &gt; Wanda</strong>.</li>
-              <li>Under Pile calibration, SLiM did not clearly outperform Wanda.</li>
-              <li>The CodeParrot comparison was inconclusive because of a run-configuration issue.</li>
+              <li>The Pile and CodeParrot comparison remains provisional: reused save paths and run settings mean those outputs are not fully independent evidence.</li>
               <li>Two of six benchmark evaluations did not complete, so this is a partial replication rather than a full confirmation.</li>
             </ul>
           </section>
@@ -69,10 +68,10 @@
         <aside class="briefAside" aria-label="Project evidence">
           <section>
             <h2>Evidence</h2>
-            <a class="briefLink" href="https://github.com/jasonbao9402/slimECS189" target="_blank" rel="noreferrer">Public team repository ↗</a>
-            <p>Code, experiment materials, and final report.</p>
-            <a class="briefLink" href="https://proceedings.mlr.press/v267/mozaffari25a.html" target="_blank" rel="noreferrer">Original SLiM paper ↗</a>
-            <p>Official ICML 2025 publication.</p>
+            <figure class="evidenceFigure">
+              <img src="assets/slim-c4-results.png" alt="Original C4 experiment chart comparing Dense, SLiM-Quant, and Wanda across ARC-Easy, ARC-Challenge, WinoGrande, and OpenBookQA" loading="lazy" width="1026" height="435" />
+              <figcaption>Figure 2 from our project report, page 4: the four completed benchmark tasks under C4 calibration. These are partial replication results; two other evaluations did not complete.</figcaption>
+            </figure>
           </section>
         </aside>
       </div>
