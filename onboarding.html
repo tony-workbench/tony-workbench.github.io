@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f4f5" />
+    <meta name="description" content="An AI loop that improves app onboarding from analytics and support mail, with A/B tests and safeguards enforced in code." />
+    <link rel="canonical" href="https://tony-workbench.github.io/onboarding.html" />
+    <link rel="stylesheet" href="styles.css?v=20261123" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tony-workbench.github.io/onboarding.html" />
+    <meta property="og:title" content="Onboarding Self-Improvement Loop — Yungang Hu" />
+    <meta property="og:description" content="An AI loop that improves app onboarding from analytics and support mail, with A/B tests and safeguards enforced in code." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Onboarding Self-Improvement Loop — Yungang Hu" />
+    <meta name="twitter:description" content="An AI loop that improves app onboarding from analytics and support mail, with A/B tests and safeguards enforced in code." />
+    <title>Onboarding Self-Improvement Loop — Yungang Hu</title>
+  </head>
+  <body class="briefPage">
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <nav class="briefNav briefShell" aria-label="Project navigation">
+      <a class="wordmark" href="index.html" aria-label="Tony Hu home">TONY HU</a>
+      <a href="index.html#work">← All projects</a>
+    </nav>
+
+    <main class="briefShell" id="main">
+      <header class="briefHeader">
+        <h1>Onboarding Self-Improvement Loop</h1>
+        <p class="briefLead">An AI loop that proposes onboarding changes from real funnel data and support mail, A/B tests them, and learns from the results, with safeguards enforced in code.</p>
+        <p class="briefMeta">Built in November 2026 as a proposal demo for Furever Dock. The funnel and support themes are real; the A/B users are simulated.</p>
+      </header>
+
+      <div class="briefHero">
+        <figure class="evidenceFigure"><img src="assets/onboarding-report.jpg" alt="Report page header for the onboarding self-improvement loop with headline results" loading="lazy" width="1400" height="670" /><figcaption>The top of the project’s report page.</figcaption></figure>
+      </div>
+
+      <div class="briefColumns">
+        <div class="briefMain">
+          <section class="briefSection">
+            <h2>The problem</h2>
+            <p>Only 17.8% of people who start Furever Dock’s onboarding finish it, and the biggest loss is between sign-in and the adoption certificate. Testing one idea at a time by hand is slow.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>How one round works</h2>
+            <ol class="briefList"><li>Read one week of the funnel from Amplitude and 62 support emails, anonymized on the mail server and grouped into 10 themes.</li><li>Gemini proposes changes, including large ones such as moving sign-in later.</li><li>Code checks block anything that drops a step, reaches outside onboarding or bypasses sign-in; fairness rules from FTC and EU guidance block fake urgency, shaming and price talk.</li><li>Changes run as overlapping A/B tests for a week, winners ship, and measured effects are shrunk by their noise before the loop learns from them.</li></ol>
+          </section>
+
+          <section class="briefSection">
+            <h2>Testing the safeguards</h2>
+            <p>Two red-team rounds reproduced dozens of ways around the rules, such as look-alike characters, prices written in words and hidden layouts. Each became a regression test, and false blocks on ordinary onboarding copy fell from 15 of 32 lines to 0.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>Results</h2>
+            <p>Over 20 simulated weeks on all new users, learning with denoising reached 51.7% completion against 43.0% without learning. The difference is borderline after correcting for three comparisons, which the report states. The repository replays every run offline without a key, with 35 passing tests.</p>
+          </section>
+        </div>
+
+        <aside class="briefAside" aria-label="Project links">
+          <section>
+            <h2>Built with</h2>
+            <p>Python, Gemini, Amplitude, empirical Bayes shrinkage, sequential A/B testing.</p>
+            <a class="briefLink" href="https://github.com/tony-workbench/onboarding-self-improvement-loop" target="_blank" rel="noreferrer">Code and README on GitHub</a>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="briefFooter">
+        <a href="index.html#work">← Back to all projects</a>
+      </footer>
+    </main>
+  </body>
+</html>

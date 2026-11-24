@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f4f5" />
+    <meta name="description" content="A calendar assistant that turns one sentence into a schedule and saves only after you confirm." />
+    <link rel="canonical" href="https://tony-workbench.github.io/plan-calendar.html" />
+    <link rel="stylesheet" href="styles.css?v=20261123" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tony-workbench.github.io/plan-calendar.html" />
+    <meta property="og:title" content="Plan Calendar — Yungang Hu" />
+    <meta property="og:description" content="A calendar assistant that turns one sentence into a schedule and saves only after you confirm." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Plan Calendar — Yungang Hu" />
+    <meta name="twitter:description" content="A calendar assistant that turns one sentence into a schedule and saves only after you confirm." />
+    <title>Plan Calendar — Yungang Hu</title>
+  </head>
+  <body class="briefPage">
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <nav class="briefNav briefShell" aria-label="Project navigation">
+      <a class="wordmark" href="index.html" aria-label="Tony Hu home">TONY HU</a>
+      <a href="index.html#work">← All projects</a>
+    </nav>
+
+    <main class="briefShell" id="main">
+      <header class="briefHeader">
+        <h1>Plan Calendar</h1>
+        <p class="briefLead">A calendar assistant that turns one sentence into a schedule around your existing events, and writes to Google Calendar only after you confirm.</p>
+        <p class="briefMeta">Built in November 2026 as a proposal for the Ask feature in Furever Dock.</p>
+      </header>
+
+      <div class="briefHero">
+        <figure class="evidenceFigure"><img src="assets/plan-calendar-lease.jpg" alt="Plan Calendar week view after asking about a lease deadline, showing new proposed blocks next to locked events and an Add it button" loading="lazy" width="1400" height="875" /><figcaption>After the lease sentence: proposed steps in green, fixed events locked, and nothing saved until “Add it”.</figcaption></figure>
+      </div>
+
+      <div class="briefColumns">
+        <div class="briefMain">
+          <section class="briefSection">
+            <h2>The problem</h2>
+            <p>People describe plans the way they talk: “My landlord needs the signed lease back by the 20th.” The assistant has to find the deadline, plan steps before it, avoid fixed events and never touch the real calendar without permission.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>How it works</h2>
+            <ol class="briefList"><li>The model only reads the request and explains the result.</li><li>A rule engine builds the schedule: buffers around fixed events, focus blocks with breaks, protected weekend time.</li><li>A separate checker verifies every rule before anything is shown.</li><li>The preview shows new blocks in green; nothing is saved until you add them, and undo is always there.</li></ol>
+          </section>
+
+          <section class="briefSection">
+            <h2>What the checker caught</h2>
+            <p>Running the checker rule by rule found rules the engine had not implemented yet, such as backup slots, no back-to-back draining tasks and replanning only the affected steps after an interruption. It also caught one leisure activity the engine had invented. All were fixed.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>Results</h2>
+            <p>All 31 rules held with zero violations across 500 random schedules. Four prompts were validated on 40 test inputs, and the work shipped as two product documents and a 65-second demo video.</p>
+          </section>
+        </div>
+
+        <aside class="briefAside" aria-label="Project links">
+          <section>
+            <h2>Built with</h2>
+            <p>JavaScript and Node.js, Gemini, Google Calendar API.</p>
+            <a class="briefLink" href="https://github.com/tony-workbench/plan-calendar" target="_blank" rel="noreferrer">Code and README on GitHub</a>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="briefFooter">
+        <a href="index.html#work">← Back to all projects</a>
+      </footer>
+    </main>
+  </body>
+</html>

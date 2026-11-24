@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f4f5" />
+    <meta name="description" content="A scheduling app built, reviewed and voted on by eight AI agents." />
+    <link rel="canonical" href="https://tony-workbench.github.io/shunri.html" />
+    <link rel="stylesheet" href="styles.css?v=20261123" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tony-workbench.github.io/shunri.html" />
+    <meta property="og:title" content="Shunri — Yungang Hu" />
+    <meta property="og:description" content="A scheduling app built, reviewed and voted on by eight AI agents." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Shunri — Yungang Hu" />
+    <meta name="twitter:description" content="A scheduling app built, reviewed and voted on by eight AI agents." />
+    <title>Shunri — Yungang Hu</title>
+  </head>
+  <body class="briefPage">
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <nav class="briefNav briefShell" aria-label="Project navigation">
+      <a class="wordmark" href="index.html" aria-label="Tony Hu home">TONY HU</a>
+      <a href="index.html#work">← All projects</a>
+    </nav>
+
+    <main class="briefShell" id="main">
+      <header class="briefHeader">
+        <h1>Shunri</h1>
+        <p class="briefLead">A local scheduling app that previews how moving one task reshapes a study plan, built and reviewed by a team of eight AI agents.</p>
+        <p class="briefMeta">Built from October to November 2026.</p>
+      </header>
+
+      <div class="briefHero">
+        <figure class="evidenceFigure"><img src="assets/shunri-day.jpg" alt="Shunri day view with a week strip, the selected task and a day timeline with a fixed event and its buffers" loading="lazy" width="1400" height="940" /><figcaption>The example day: the selected task on the left, the timeline with a fixed event and its buffers on the right.</figcaption></figure>
+      </div>
+
+      <div class="briefColumns">
+        <div class="briefMain">
+          <section class="briefSection">
+            <h2>The problem</h2>
+            <p>When one task moves, the rest of a study day has to move with it: breaks, buffers around fixed events and a daily limit. Shunri shows one proposal for the whole change and saves it only after you say yes, with undo always available.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>How the agents work</h2>
+            <p>Eight AI roles run on four cloud machines: coding, review, QA, product rules, UX, copy, scheduling and operations. Each change is written, reviewed and voted on, and only passes with at least seven of eight approvals.</p><p>An n8n flow checks the coordinator every five minutes, starts the machines, resumes interrupted work and shuts everything down when the queue is done.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>Problems I fixed along the way</h2>
+            <ol class="briefList"><li>Reverted a push that would have deleted the README and direction document, then barred the orchestrator from rewriting those files.</li><li>Found a blank-page bug with a headless browser: the server missed one module. Added a test that the server serves every module the page loads.</li><li>Traced slow rounds to each item needing about three fix rounds with only one seat writing code, and split work into a task board.</li></ol>
+          </section>
+
+          <section class="briefSection">
+            <h2>Results</h2>
+            <p>One overnight round shipped 24 changes. Front-end code shrank by about 40% while all 980 tests kept passing. The app and the review tool are separate public repositories.</p>
+          </section>
+        </div>
+
+        <aside class="briefAside" aria-label="Project links">
+          <section>
+            <h2>Built with</h2>
+            <p>JavaScript and Node.js, n8n, Claude, cloud virtual machines, Google Calendar API.</p>
+            <a class="briefLink" href="https://github.com/tony-workbench/shunri" target="_blank" rel="noreferrer">Code and README on GitHub</a>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="briefFooter">
+        <a href="index.html#work">← Back to all projects</a>
+      </footer>
+    </main>
+  </body>
+</html>

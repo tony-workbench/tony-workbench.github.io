@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f4f5" />
+    <meta name="description" content="An iPhone workout planner whose memory, planning and calendar agents run on the phone." />
+    <link rel="canonical" href="https://tony-workbench.github.io/evergreen.html" />
+    <link rel="stylesheet" href="styles.css?v=20261123" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tony-workbench.github.io/evergreen.html" />
+    <meta property="og:title" content="Evergreen — Yungang Hu" />
+    <meta property="og:description" content="An iPhone workout planner whose memory, planning and calendar agents run on the phone." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Evergreen — Yungang Hu" />
+    <meta name="twitter:description" content="An iPhone workout planner whose memory, planning and calendar agents run on the phone." />
+    <title>Evergreen — Yungang Hu</title>
+  </head>
+  <body class="briefPage">
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <nav class="briefNav briefShell" aria-label="Project navigation">
+      <a class="wordmark" href="index.html" aria-label="Tony Hu home">TONY HU</a>
+      <a href="index.html#work">← All projects</a>
+    </nav>
+
+    <main class="briefShell" id="main">
+      <header class="briefHeader">
+        <h1>Evergreen</h1>
+        <p class="briefLead">An iPhone workout planner whose memory, planning and calendar agents run on the phone, and code checks every plan before you see it.</p>
+        <p class="briefMeta">Started at the Personal Agents Hackathon in November 2026, where our team placed first in the Amplitude sponsor track. I kept building it on my own afterwards.</p>
+      </header>
+
+      <div class="briefHero">
+        <div class="phonePair"><figure class="evidenceFigure"><img src="assets/evergreen-today.jpg" alt="Evergreen Today screen suggesting a Tuesday 7 AM run with Add to plan, Not now and Why" loading="lazy" width="600" height="1304" /><figcaption>The Today screen: one suggestion, one button.</figcaption></figure><figure class="evidenceFigure"><img src="assets/evergreen-why.jpg" alt="Evergreen screen explaining why a workout was suggested" loading="lazy" width="600" height="1304" /><figcaption>Why: the facts behind the suggestion.</figcaption></figure></div>
+      </div>
+
+      <div class="briefColumns">
+        <div class="briefMain">
+          <section class="briefSection">
+            <h2>The problem</h2>
+            <p>Most workout apps hand you a fixed program. Real weeks have bad sleep, late meetings and missed days. The team wanted an app that plans training around the week a person actually has.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>My part on the team</h2>
+            <p>I wrote the memory agent: it turns a health snapshot into short facts, each a number with its time window and never advice, for the recommendation prompt. It was 84 files with 493 tests, merged into the app that won the Amplitude track.</p>
+          </section>
+
+          <section class="briefSection">
+            <h2>What I built after the hackathon</h2>
+            <ol class="briefList"><li>Moved memory, recommendation and calendar agents onto the phone, so nothing runs on a server and the user brings their own Gemini key.</li><li>Let the model propose and code decide: every week passes rules for load, rest after poor sleep and the calendar, with one repair round before a rule-built week is used.</li><li>Made destructive memory actions ask first, after "wipe the day" produced a forget-everything card in testing.</li><li>Added earned screen time: workout minutes unlock chosen apps through Apple’s Screen Time APIs.</li></ol>
+          </section>
+
+          <section class="briefSection">
+            <h2>Results</h2>
+            <p>An evaluation set of sentences the prompts had never seen passed 118 of 120 cases with the real model. Plan time fell from 18–47 seconds to about 7 by tightening prompts and checks instead of switching to a bigger model. 880 engine and contract tests and 244 app tests pass, and five bugs found in independent code reviews were fixed before release.</p>
+          </section>
+        </div>
+
+        <aside class="briefAside" aria-label="Project links">
+          <section>
+            <h2>Built with</h2>
+            <p>Swift and SwiftUI, JavaScriptCore, Gemini, HealthKit, Screen Time APIs (Family Controls, Managed Settings, Device Activity).</p>
+            <a class="briefLink" href="https://github.com/tony-workbench/Evergreen" target="_blank" rel="noreferrer">Code and README on GitHub</a>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="briefFooter">
+        <a href="index.html#work">← Back to all projects</a>
+      </footer>
+    </main>
+  </body>
+</html>
